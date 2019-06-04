@@ -1,5 +1,5 @@
 //Questão7
-var frase = "Sim é útil e importante aprender matematica";
+var frase = "Sim é úTiL e impoRtaNte aprEnder MateMatica";
 var resultado = frase.split(" ");
 var i;
 for (i=0; i < resultado.length; i++){
