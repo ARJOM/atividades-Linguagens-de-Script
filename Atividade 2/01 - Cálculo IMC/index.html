@@ -5,13 +5,23 @@
     <title>Questão 1</title>
 </head>
 <body>
-    <form action="POST">
-        <p>Altura</p>
-        <input type="text">
-        <p>Peso</p>]
-        <input type="text">
-        
-    </form>
+    <div>
+        <label for="peso">Peso:</label>
+        <input type="text" id="peso" />
+    </div>
+    <div>
+        <label for="altura">Altura:</label>
+        <input type="text" id="altura" />
+    </div>
+    <div>
+        <label for="genero">Gênero:</label>
+        <input type="radio" name="genero" value="m"> Masculino
+        <input type="radio" name="genero" value="f"> Feminino
+    </div>
+    <div>
+        <button onclick="calcula()">Calcular</button>
+    </div>
+    <p id="resultado"></p>
     <script src="main.js"></script>
 </body>
 </html>
