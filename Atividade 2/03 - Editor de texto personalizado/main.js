@@ -1,16 +1,21 @@
-function palavras(){
+ function palavras(){
     let mensagem = document.getElementById("msg").value;
     let resultado = document.getElementById("res");
-    let contagem = mensagem.split(" ");
-    if (contagem == ""){
-        resultado.value = "Palavras: 0";
+    let contador = 0;
+    let contagem = mensagem.split("\n");
+    for (var i = 0; i < contagem.length; i++){
+        let linha = contagem [i];
+        let separa = linha.split(" ");
+        for (var j = 0; j<separa.length; j++){
+            if (separa[j] != ""){
+                contador += 1;
+            }
+        }
     }
-    else{
-        resultado.value = "Palavras: "+contagem.length;
-    }
+    resultado.value = "Palavras: "+contador;
 }
 
-function letras(){
+function caracteres(){
     let mensagem = document.getElementById("msg").value;
     let resultado = document.getElementById("res");
     let contador = 0;
@@ -18,10 +23,13 @@ function letras(){
     for (var i = 0; i < contagem.length; i++){
         let palavra = contagem [i];
         for (var j = 0; j < palavra.length; j++){
-            contador += 1;
+            let caracter = palavra[j];
+            if (caracter != "\n"){
+                contador += 1;
+            }
         }
     }
-    resultado.value = "Letras: "+contador;
+    resultado.value = "Caracteres: "+contador;
 }
 
 function linhas(){
